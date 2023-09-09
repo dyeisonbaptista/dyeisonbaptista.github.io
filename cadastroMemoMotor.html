@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro De Memorando Motor</title>
+    <style>
+        /* Estilos CSS (opcional, para personalização) */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-registration-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .product-registration-container h2 {
+            text-align: center;
+        }
+
+        .product-registration-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-registration-container label, .product-registration-container input, .product-registration-container select {
+            margin-bottom: 10px;
+        }
+
+        .product-registration-container input, .product-registration-container select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .product-registration-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: 2px solid #000000;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .product-registration-container h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-registration-container">
+        <a href="home.html">HOME</a>
+        <center>
+        <img src="img/FrangoRicoLogo.png" alt="Logo Da Frango Rico" width="150px">
+    </center>
+        <form action="PHP/cadastroMemoMotor.php" method="post">
+        <h1>Registro De Motor </h1>
+        <h2>Manutenção Elétrica</h2>
+        <form id="product-registration-form">
+            <label for="memo">MEMO:</label>
+            <input type="text" id="memo" name="memo"  required>
+
+            <label for="cv">CV:</label>
+            <input type="text" id="cv" name="cv"  required>
+            
+            <label for="rpm">RPM:</label>
+            <input type="text" id="rpm" name="rpm"  required>
+
+            <label for="modelo">MODELO:</label>
+            <input type="text" id="modelo" name="modelo"  required>
+
+            <label for="empresa">EMPRESA:</label>
+            <input type="text" id="empresa" name="empresa"  required>
+
+            <label for="nmotor">Nº Motor:</label>
+            <input type="number" id="nmotor" name="nmotor"  required>
+            
+            <label for="serviço">SERVIÇO:</label>
+            <textarea id="serviço" name="serviço"  required></textarea>
+            
+            <label for="setor">SETOR:</label>
+            <select id="setor" name="setor"  required>
+                <option value="NÃO TEM">NÃO TEM</option>
+                <option value="PLATAFORMA">PLATAFORMA</option>
+                <option value="PENDURA VIVA">PENDURA VIVA</option>
+                <option value="SANGRIA">SANGRIA</option>
+                <option value="TÚNEL SANGRIA">TÚNEL SANGRIA</option>
+				<option value="ESCALDAGEM">ESCALDAGEM</option>
+				<option value="EVISCERAÇÃO">EVISCERAÇÃO</option>
+				<option value="SALA DE COMANDO EVISCERAÇÃO">SALA DE COMANDO EVISCERAÇÃO</option>
+				<option value="SIF">SIF</option>
+				<option value="PCC">PCC</option>
+				<option value="RESFRIAMENTO">RESFRIAMENTO</option>
+				<option value="MIÚDOS">MIÚDOS</option>
+				<option value="REPENDURA">REPENDURA</option>
+				<option value="HALL DE ENTRADA">HALL DE ENTRADA</option>
+				<option value="SALA CAIXA BRANCA">SALA CAIXA BRANCA</option>
+				<option value="SALA CAIXA VERMELHA">SALA CAIXA VERMELHA</option>
+				<option value="PALETIZAÇÃO Nº 1 (VELHA)">PALETIZAÇÃO Nº 1 (VELHA)</option>
+				<option value="PALETIZAÇÃO Nº 2 (NOVA)">PALETIZAÇÃO Nº 2 (NOVA)</option>
+				<option value="EXPEDIÇÃO Nº 1 (VELHA)">EXPEDIÇÃO Nº 1 (VELHA)</option>
+				<option value="EXPEDIÇÃO Nº 2 (NOVA)">EXPEDIÇÃO Nº 2 (NOVA)</option>
+				<option value="TÚNEL CONGELAMENTO">TÚNEL CONGELAMENTO</option>
+				<option value="CAMARA FRIA C4">CAMARA FRIA C4</option>
+				<option value="CAMARA FRIA C5">CAMARA FRIA C5</option>
+				<option value="CAMARA FRIA C1">CAMARA FRIA C1</option>
+				<option value="CAMARA FRIA RESFRIADO">CAMARA FRIA RESFRIADO</option>
+				<option value="CAMARA FRIA CURA">CAMARA FRIA CURA</option>
+				<option value="HALL PALETIZAÇÃO Nº 1 PARA Nº 2">HALL PALETIZAÇÃO Nº 1 PARA Nº 2</option>
+				<option value="SECUNDARIA DO CORTE">SECUNDARIA DO CORTE</option>
+				<option value="SALA DE TEMPERO">SALA DE TEMPERO</option>
+				<option value="CAIXA DE PAPELÃO">CAIXA DE PAPELÃO</option>
+				<option value="CARRIMBO">CARRIMBO</option>
+				<option value="SALA DE AFIAÇÃO DE FACAS">SALA DE AFIAÇÃO DE FACAS</option>
+				<option value="SALA DE ESTERILIZAÇÃO DE FACAS">SALA DE ESTERILIZAÇÃO DE FACAS</option>
+				<option value="SALA DE MAQUINAS">SALA DE MAQUINAS</option>
+				<option value="FABRICA DE FARINHA">FABRICA DE FARINHA</option>
+				<option value="ETE">ETE</option>
+				<option value="CALDEIRA VELHA">CALDEIRA VELHA</option>
+				<option value="CALDEIRA NOVA">CALDEIRA NOVA</option>
+				<option value="RECEPÇÃO DE VISCERAS">RECEPÇÃO DE VISCERAS</option>
+				<option value="POÇO PROFUNDO VELHO">POÇO PROFUNDO VELHO</option>
+				<option value="POÇO PROFUNDO NOVO">POÇO PROFUNDO NOVO</option>
+				<option value="SUBSTAÇÃO">SUBSTAÇÃO</option>
+                <!-- Adicione mais opções de categoria conforme necessário -->
+            </select>
+            <label for="dataEnvio">DATA DO ENVIO:</label>
+            <input type="date"id="dataEnvio" name="dataEnvio"  required>
+            <br />
+            <label for="dataRetorno">DATA DO RETORNO:</label>
+            <input type="date"id="dataRetorno" name="dataRetorno"  >
+
+            <button type="submit">Registrar Memorando</button>
+			<br> <br>
+			<button type="reset">CANCELAR</button>
+        </form>
+    </form>
+    <SCript>
+        function registrarMemoMotor(){
+            var memo = document.getElementById("memo").value;
+            var cv = document.getElementById("cv").value;
+            var rpm = document.getElementById("rpm").value;
+            var modelo = document.getElementById("modelo").value;
+            var empresa = document.getElementById("empresa").value;
+			var nMotor = document.getElementById("nMotor").value;
+            var serviço = document.getElementById("serviço").value;
+            var setor = document.getElementById("setor").value;
+            var dataEnvio = document.getElementById("data-envio").value;
+            var dataRetorno = document.getElementById("dataRetorno").value;
+			if(){
+			
+			}
+            
+        }
+    </SCript>
+    </div>
+</body>
+</html>
